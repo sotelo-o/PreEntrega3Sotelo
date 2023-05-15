@@ -1,0 +1,15 @@
+/* R O O T */
+
+@import 'utilities/vars';
+@import 'utilities/mixins';
+
+@import 'base/reset';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'pages/inicio';
+@import 'pages/tienda';
+@import 'pages/accesorios';
+@import 'pages/blog';
+@import 'pages/contacto';

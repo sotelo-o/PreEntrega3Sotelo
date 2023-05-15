@@ -1,0 +1,122 @@
+/* H E A D E R */
+
+.tag-header {
+    background-color: $color-1;
+    width: 100%;
+    
+    nav {
+        div {
+            .navbar-toggler{
+                color: $color-2;
+                border: none;
+                @include mp (2px, 0);
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+                &:hover {
+                    outline: none;
+                    box-shadow: none;             
+                    color: $color-4;
+                    transition: all .5s 0s;
+                }
+
+                ion-icon {
+                    font-size: 50px;
+                    --ionicon-stroke-width: 50px;
+                }
+            }
+
+            .navbar-brand {
+                @include mp (2px, 0);
+
+                img {
+                    @include size(45px, 45px);
+                    @include mp(0, 0);
+                }
+            }
+            .collapsing{
+                transition: none;
+
+            }
+            .collapse {
+                justify-content: center;
+
+                .navbar-nav .nav-link.active, .navbar-nav .nav-link.show .collapse {
+                    color: $color-1;
+                }
+
+                ul li{
+                    @include mp(0, 0);
+
+                    .nav-link {
+                        @include center-flex;
+
+                        background-color: $color-1;
+                        border-radius: 10px;
+                        padding: 20px !important;
+                        height: 40px;
+                    
+                        color: $color-4 !important;
+                        font-size: 25px;
+                        letter-spacing: 1px;
+                    
+                        line-height: 1;
+                        transition: all 0.2s 0s;
+
+                        &:hover {
+                            text-shadow:
+                            0 0 1px $color-4,
+                            -1px -1px 0 $color-4,  
+                            1px -1px 0 $color-4,
+                            -1px 1px 0 $color-4,
+                            1px 1px 0 $color-4;
+                            border-radius: 10px;
+                            margin: 0;
+                            font-weight: 900;                 
+                            color: $color-1 !important;
+                            transition: all 0.2s 0s;
+                        }
+                    }
+                }
+            }
+            .cart-container {
+                @include mp(0, 0);
+
+                a {
+                    @include mp(0, 2px);
+                    display: flex;
+                    justify-content: flex-end;
+
+                    ion-icon {
+                        @include size(50px, 50px);
+                        @include center-flex;
+
+                        color: $color-2;                    
+                        --ionicon-stroke-width: 30px;
+                        &:hover {
+                            color: $color-4;
+                            transform: all .5s 0s;
+                        }
+                    }
+                }
+            }
+            
+            .show ul li {
+                font-size: 100px;
+            }
+        }
+    }
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show .collapse {
+    @include mp0;
+
+    color: transparent;
+    font-size: 0px;
+    transition: none;
+}
+.nav-link {
+    text-align: center;
+    transition: none;
+}

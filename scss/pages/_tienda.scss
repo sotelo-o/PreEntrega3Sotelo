@@ -1,0 +1,316 @@
+/* T I E N D A */
+
+.tag-tienda-main {
+    @include size-eq(100%);
+    
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow: hidden;
+
+    .bar-selection {
+        @include size(auto, 100%);
+
+        display: flex;
+        justify-content: center;
+
+        .text-selection {
+            @include size(auto, 100%);
+
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            background-color: $color-4;
+            border-radius: 10px 10px 10px 0px;
+
+            h2 {
+                @include mp(20px, 0);
+                
+                font-size: 25px;
+                font-weight: 900;
+                color: $color-1;
+
+                &:hover {
+                    color: $color-2;
+                    transition: all .1s 0s;
+                }
+            }
+        }
+    }
+    .ui-shop {
+        @include size-eq(100%);
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .filter-selection {
+            @include size-eq(100%);
+
+            background-color: black;
+            padding: 3%;
+
+            .txt-fi {
+                color: $color-5;
+                font-size: 30px;
+                padding: 20px 20px 20px 0px;
+                border-bottom: solid 1px $color-2;
+            }
+            h3 {
+                font-size: 20px;
+                color: $color-2;
+            }
+            .types-filters {
+                padding: 20px 20px 20px 0px;
+
+                .filter {
+                    width: auto;
+                    display: flex;
+
+                    align-items: center;
+
+                    h3 {
+                        @include  mp(8px 10px, 0);
+                    }
+                    .check-fil {
+                        @include size-eq(25px);
+                        @include mp(2px, 8px 10px 8px 0px);
+                        appearance: none;
+                        -webkit-appearance: none;
+                        background-color: transparent;
+                        border-radius: 10px;
+                        border: solid 2px $color-2;
+
+                        &:checked {
+                            color: $color-4;
+                            background-color: $color-5;
+                            transition: all 0.2s 0s;
+                        }
+                    }
+                    .checkcolor-1 {
+                        @include size-eq(25px);
+
+                        appearance: none;
+                        -webkit-appearance: none;
+                        background-color: transparent;
+                        border-radius: 50%;
+                        border: solid 2px $color-2;
+                        margin: 0 10px 0 0;
+
+                        &:checked {
+                            border: solid 2px $color-5;
+                        }
+                    }
+                    .checkcolor-2{
+                        @extend .checkcolor-1;
+                        $c: #ffffff;
+                        background-color: #ffffff;
+                    }
+                    .checkcolor-3{
+                        @extend .checkcolor-1;
+
+                        background-color: #3a3a3a;
+                    }
+                    .checkcolor-4{
+                        @extend .checkcolor-1;
+
+                        background-color: #2c3052;
+                    }
+                    .checkcolor-5{
+                        @extend .checkcolor-1;
+
+                        background-color: #8d2727;
+                    }
+                }
+            }
+        }
+        .items-products {
+            @include size(100%, auto);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 3%;
+            overflow: scroll;
+
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+            .product {
+                @include size(450px, 300px);
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                margin: 40px 20px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 0px 0px 15px 15px;
+                overflow: hidden;
+
+                .back-product {
+                    @include size(450px, 300px);
+
+                    z-index: 0;
+                    position: absolute;
+                }
+                .add-product- {
+                    @include size (auto, 100%);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+                    z-index: 1;
+
+                    h3 {
+                        letter-spacing: 1px;
+                        font-size: 20px; 
+                        color: $color-1;
+                        margin: 0;
+                        text-align: start;
+                    }
+                    ion-icon {
+                        font-size: 40px;
+                        color: $color-4;
+                    }
+                }
+                div {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h3 {
+                        margin: 0;
+                    }
+                }
+                .bar-product-price {
+                    @include size(auto, 100%);
+                    z-index: 1;
+                    padding: 20px;
+                    background-color: $color-3;
+
+                    .product-color {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: auto;
+                        margin: 0;
+                        color: $color-2;
+                        font-size: 20px;
+
+                        ion-icon {
+                            color: $color-2;
+                            font-size: 20px;
+                            margin: 0px 5px;
+                            border: solid 1px #ffffff;
+                            border-radius: 50%;
+                        }
+                        .color1 {
+                            color: #000000;
+                        }
+                        .color2{
+                            color: #ffffff;
+                        }
+                        .color3{
+                            color: #3a3a3a;
+                        }
+                        .color4{
+                            color: #2c3052;
+                        }
+                        .color5{
+                            color: #8d2727;
+                        }
+                    }
+                    .product-price {
+                        font-size: 30px;
+                        color: $color-2;
+                        transition: all 0.9s 0s;
+                    }
+                }
+            }
+
+            $products: product-1, product-2, product-3, product-4, product-5, product-6, product-7, product-8, product-9, product-10, product-11, product-12;
+            @each $product in $products {
+                .#{$product} {
+                    background-image: url(../images/products/#{$product}.jpg);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .tag-tienda-main {
+        @include size(auto, 100%);
+        padding: 2%;
+
+        .bar-selection {
+            width: 100%;
+
+            .text-selection {
+                h2 {
+                    font-size: 20px;
+                    padding: 15px 10px;
+                }
+            }
+        }
+        .ui-shop {
+            height: 1000px;
+            display: grid;
+            grid-template-columns:  2fr 3fr;
+
+            .filter-selection {
+                @include size-eq(100%);
+
+                .txt-fi {
+                    font-size: 18px;
+                    padding: 20px;
+                }
+                .types-filters {
+                    padding: 20px 0px;
+                    .filter {
+                        padding: 5px 10px;
+
+                        .check-fil {
+                            @include size-eq(20px);
+                            border-radius: 8px;
+                            margin: 0 10px 0 0;
+                        }
+                        h3 {
+                            @include mp(0, 0);
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+            }
+            .items-products {
+                @include mp(0, 0);
+                @include size-eq(100%);
+                
+                gap: 20px;
+
+                .product { 
+                    @include size(360px, 240px);
+                    @include mp(0px, 20px 0px);
+
+                    .add-product- {
+                        padding: 10px;
+                    }
+                    .bar-product-price {
+                        padding: 10px;
+                        .product-color {
+                            font-size: 18px;
+
+                            ion-icon {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

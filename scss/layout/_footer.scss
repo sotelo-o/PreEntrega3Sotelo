@@ -1,0 +1,136 @@
+/* F O O T E R */
+
+.tag-footer {
+    @include size(auto, 100%);
+    @include mp(20px, 0);
+    
+    display: flex;
+    justify-content: center;
+    background-color: $color-1;
+
+    .footer-bar {
+        @include mp(0 0 50px 0, 0);
+        @include size(auto, 100%);
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+
+        background-color: $color-1;
+
+        .arrow-return {
+            @include size(auto, 100%);
+            @include center-flex;
+
+            order: 0;
+            font-size: 30px;
+            color: $color-2;
+            --ionicon-stroke-width: 50px;
+            a {
+                font-size: 30px;
+                color: $color-2;
+                --ionicon-stroke-width: 30px;
+
+                &:hover {
+                    color: $color-4;
+                    transition: all .5s 0s;
+                }
+            }
+        }
+
+        .contact-info {
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            height: 80px;
+            width: 100%;
+
+            div {
+                @include size-eq (auto);
+                @include center-flex;
+
+                color: $color-2;
+                font-size: 20px;
+                
+                ion-icon{
+                    margin: 10px;
+                    --ionicon-stroke-width: 40px;
+                }
+                h3 {
+                    font-family: $font-Kanit;
+                    margin: 0px ;
+                    letter-spacing: 1px;
+                    color: $color-2;
+                    text-align: center;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .social-net {
+            @include center-flex;
+            @include size(50px, 100%);
+
+            order: 2;
+
+            a {
+                @include size(40px, 40px);
+                @include mp(8px, 5px);
+                @include center-flex;
+
+                border-radius: 50%;
+                background-color: $color-2;
+                color: $color-1;
+                
+                ion-icon {
+                    @include size(100%, 100%);
+                }
+            }
+
+            .social-1:hover {
+                background-color: #3B5998;
+                color: #F6F1F1;
+                transition: all .2s 0s;
+            
+            }
+            .social-2:hover {
+                background-color: #ca4773;
+                color: #F6F1F1;
+                transition: all .2s 0s;
+            } 
+            .social-3:hover {
+                background-color: #000000;
+                color: #F6F1F1;
+                transition: all .2s 0s;   
+            }
+        }
+    }
+}
+
+@media (max-width: 700px){
+
+    .tag-footer .footer-bar{
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr;
+
+        grid-template-areas: 
+            "arrow social"
+            "info info";
+
+        .arrow-return{
+            order: 0;
+            grid-area: arrow;
+            justify-content: flex-start;
+        }
+        .contact-info{
+            order: 2;
+            grid-area: info;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        .social-net {
+            order: 1;
+            grid-area: social;
+            justify-content: flex-end;
+        }
+    }
+}
