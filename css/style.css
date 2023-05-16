@@ -257,6 +257,12 @@ html, body {
     flex-direction: row;
     justify-content: space-between;
   }
+  .tag-footer .footer-bar .contact-info .text-correo ion-icon, .tag-footer .footer-bar .contact-info .tex-number ion-icon {
+    margin: 6px;
+  }
+  .tag-footer .footer-bar .contact-info .text-correo h3, .tag-footer .footer-bar .contact-info .tex-number h3 {
+    font-size: 16px;
+  }
   .tag-footer .footer-bar .social-net {
     order: 1;
     grid-area: social;
@@ -688,6 +694,10 @@ html, body {
   background-position: center;
   border-radius: 0px 0px 15px 15px;
   overflow: hidden;
+  transition: all 0.2s 0s;
+}
+.tag-tienda-main .ui-shop .items-products .product:hover {
+  transform: scale(1.02);
 }
 .tag-tienda-main .ui-shop .items-products .product .back-product {
   height: 450px;
@@ -852,25 +862,35 @@ html, body {
     margin: 0;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
     gap: 20px;
   }
   .tag-tienda-main .ui-shop .items-products .product {
-    height: 360px;
-    width: 240px;
+    height: 345px;
+    width: 230px;
     padding: 0px;
     margin: 20px 0px;
   }
+  .tag-tienda-main .ui-shop .items-products .product:hover {
+    transform: none;
+  }
   .tag-tienda-main .ui-shop .items-products .product .add-product- {
     padding: 10px;
+  }
+  .tag-tienda-main .ui-shop .items-products .product .add-product- h3 {
+    font-size: 16px;
   }
   .tag-tienda-main .ui-shop .items-products .product .bar-product-price {
     padding: 10px;
   }
   .tag-tienda-main .ui-shop .items-products .product .bar-product-price .product-color {
-    font-size: 18px;
+    font-size: 16px;
   }
   .tag-tienda-main .ui-shop .items-products .product .bar-product-price .product-color ion-icon {
     font-size: 15px;
+  }
+  .tag-tienda-main .ui-shop .items-products .product .bar-product-price .product-price {
+    font-size: 20px;
   }
 }
 /* A C C E S O R I O S */
@@ -1111,9 +1131,11 @@ body, main {
   border-radius: 5px 5px 0px 0px;
   overflow: hidden;
   border-bottom: solid 5px #73CFD9;
+  transition: all 0.2s 0s;
 }
 .tag-main .modech-blog .articles-section .article:hover {
-  border: solid 1px #EDEDED;
+  transform: scale(1.02);
+  outline: solid 1px #EDEDED;
 }
 .tag-main .modech-blog .articles-section .article .img-art {
   height: auto;

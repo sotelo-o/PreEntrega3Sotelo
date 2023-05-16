@@ -147,7 +147,11 @@
                 background-position: center;
                 border-radius: 0px 0px 15px 15px;
                 overflow: hidden;
+                transition: all 0.2s 0s;
 
+                &:hover {
+                    transform: scale(1.02);
+                }
                 .back-product {
                     @include size(450px, 300px);
 
@@ -289,24 +293,35 @@
             .items-products {
                 @include mp(0, 0);
                 @include size-eq(100%);
-                
+                overflow-x: hidden;
                 gap: 20px;
 
                 .product { 
-                    @include size(360px, 240px);
+                    @include size(345px, 230px);
                     @include mp(0px, 20px 0px);
+
+                    &:hover {
+                        transform: none;
+                    }
 
                     .add-product- {
                         padding: 10px;
+
+                        h3 {
+                            font-size: 16px;
+                        }
                     }
                     .bar-product-price {
                         padding: 10px;
                         .product-color {
-                            font-size: 18px;
+                            font-size: 16px;
 
                             ion-icon {
                                 font-size: 15px;
                             }
+                        }
+                        .product-price{
+                            font-size: 20px;
                         }
                     }
                 }

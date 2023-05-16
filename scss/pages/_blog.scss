@@ -72,8 +72,12 @@
                 border-radius: 5px 5px 0px 0px;                
                 overflow: hidden;           
                 border-bottom: solid 5px #73CFD9;
+                transition: all 0.2s 0s;
+                
                 &:hover {
-                    border: solid 1px $color-2; 
+                    transform: scale(1.02);
+                    outline: solid 1px $color-2;
+                
                 }
 
                 .img-art {
